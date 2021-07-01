@@ -1,0 +1,33 @@
+
+img {
+    width: 200px;
+    display: flex;
+    height: 300px;
+    border-radius: 10px;
+  }
+  .content { 
+    padding: 16px;
+    width: 20px;
+    height: 100%;
+    border: 1px solid lightgray; 
+    margin: 20px 30px 0 0;
+    border-radius: 10px;
+  }
+  .col-sm-3 {
+    flex: 0 0 0;
+    max-width: 25%;
+}
+  
+  .show-less {
+    height: 8rem;
+    overflow: hidden;
+    padding: 1rem;
+}
+button{
+  margin-top: 5px;
+}
+ 
+  
+  .content > mat-card { 
+    width: 100%; 
+  }

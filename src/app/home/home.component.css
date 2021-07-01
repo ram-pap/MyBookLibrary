@@ -1,0 +1,66 @@
+
+a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover, a:active{
+    color: lightgray;
+  }
+  .navbar{
+    color:black;
+    margin: 0;
+    background-color: whitesmoke;
+    width: 100%;
+   
+  }
+  .navigation-items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+     }
+  .matCard{
+    background-color: #90bdbf;
+    width: auto;
+    border-radius: 0px;
+  }
+  mat-toolbar{
+    border-radius: 3px;
+    max-height: 60px;
+  }
+  
+  .active-cyan-2 input[type=text]:focus:not([readonly]) {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+    }
+    
+    .active-cyan input[type=text] {
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
+    }
+    input.form-control{
+        width: 350px;
+    }
+    .active-cyan .fa,
+    .active-cyan-2 .fa {
+    color: #4dd0e1;
+    }
+  
+    .example-form {
+      min-width: 80px;
+      max-width: 500px;
+      width: 100%;
+      min-height: 100px;
+      max-height: 120px;
+      
+    }
+    .example-full-width {
+      width: 170%;
+    }
+    .mat-toolbar, .mat-toolbar h1, .mat-toolbar h2, .mat-toolbar h3, .mat-toolbar h4, .mat-toolbar h5,.mat-toolbar h6,h6 {
+        font: 500 calc(19px * 0.67)/20px Roboto, "Helvetica Neue", sans-serif;
+        letter-spacing: normal;
+    }  
+
+    
+   

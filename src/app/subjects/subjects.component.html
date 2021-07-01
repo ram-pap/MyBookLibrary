@@ -1,0 +1,24 @@
+<div *ngIf=" getWorks(); else elseBlock" class="shadow-lg p-3 mb-5 bg-white" fxLayout="row wrap" fxLayoutGap="16px grid"
+    fxLayoutAlign="center">
+    <div fxFlex="15%" fxFlex.sm="33%" fxFlex.xs="50%" *ngFor="let member of getWorks()">
+        <a routerLink='/{{member.key}}/{{member.title}}'><img class="img-fluid z-depth-2 rounded "
+                src="https://covers.openlibrary.org/b/id/{{member.cover_id}}-M.jpg" alt="{{member.title}}" /></a>
+    </div>
+</div>
+
+<ng-template #elseBlock>
+    <div *ngFor='let items of getMap() | keyvalue'>
+        <mat-card>
+            <a routerLink="/subjects/{{items.value.name.replace(' ','_')}}">{{items.value.name | titlecase}}</a>
+        </mat-card>
+        <nav mat-tab-nav-bar style="background-color:whitesmoke;">
+            <div *ngFor='let item of items.value.works'>
+                <a mat-tab-link routerLink="/{{item.key}}/{{item.title.replace(' ','_')}}">
+                    <img class="img-fluid z-depth-2 rounded"
+                        src="https://covers.openlibrary.org/b/id/{{item.cover_id}}-L.jpg" alt="{{item.title}}" />
+                    </a>
+                    <!--button  class="btn btn-secondary" style="margin-left: 30px;">Add Favourite</button-->
+            </div>
+        </nav>
+    </div>
+</ng-template>

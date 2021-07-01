@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="content col-sm-3">
+             <img mat-card-image src="https://covers.openlibrary.org/b/id/{{bookdetails.covers[0]}}-M.jpg" alt="{{bookdetails.title}}"  />           
+             <button class="btn btn-outline-secondary"  style="margin-left: 30px;" (click) ="addToFavourite()">Add Favourite</button>
+        </div>
+        <div class=" content col-sm-6">
+          <p><b>{{bookdetails.title}} </b></p>
+                    <p>This edition published in {{bookdetails.subject_times}}</p>
+                    <p>This edition last Modified in {{bookdetails.last_modified.value | date}}</p>
+            <hr/>
+                <div [ngClass]="{'show-less': showShortDesciption}">
+                     <p>Description:</p>
+                     <p *ngIf = "bookdetails.description"> {{bookdetails.description.value != null ? bookdetails.description.value : bookdetails.description != null}}</p>
+                </div>
+               <div  *ngIf = "bookdetails.description" >
+                    <a (click)="alterDescriptionText()" style="float: right; color: lightskyblue;">
+                        {{ showShortDesciption ? 'show less...': 'show more' }}</a>   
+                        <hr/>
+                    </div>
+                        <!--div>
+                            SUBJECTS: 
+                            <a href="#" *ngFor='let subject of bookdetails.subjects' >{{subject}},</a> 
+                        </div-->         
+        </div>
+        
+    </div>
+</div>
+    
+  

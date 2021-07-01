@@ -1,0 +1,15 @@
+<!--mat-nav-list>
+    <ul class="navigation-items">
+        <li  *ngFor="let item of menuItems">
+            <a mat-list-item routerLink="/{{item.icon}}" (click)="onSidenavClose()">
+                <span class="nav-caption"> {{item.label}}</span>
+            </a>
+        </li>
+    </ul>
+</mat-nav-list-->
+
+<mat-sidenav-container fullscreen class="sidenav-container">
+    <mat-sidenav #sidenav role="navigation" mode="side" [opened]="sidenavLayout">
+      sidenav sidemenu
+    </mat-sidenav>
+</mat-sidenav-container>

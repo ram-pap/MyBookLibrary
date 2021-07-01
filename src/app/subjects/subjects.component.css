@@ -1,0 +1,56 @@
+p {
+    font-family: Lato;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover, a:active{
+    color: lightgray;
+  }  
+  .card{
+    margin: 2px;
+  }
+  .container {
+    display: flex;
+    height: 200px;
+  }
+  img {
+      width: 130px;
+      object-fit: cover;
+      margin-top: 20px;
+      display: flex;
+      height: 200px;
+      margin: 0 auto;
+      box-shadow: 2px 3px 6px 0 black;
+      border-radius: 3px;
+      image-resolution: 750dpi; 
+      
+    }
+    .mat-tab-link{
+      opacity: 1;
+    } 
+  
+   
+    .template{
+      margin-top: 22px;
+    }
+    .mat-tab-link {
+      height: 250px;
+      padding: 2px 0 0 24px;
+      cursor: pointer;
+      box-sizing: border-box;
+      min-width: 160px;
+      text-align: center;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap;
+      vertical-align: top;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      margin-top: 20px;
+      
+  }

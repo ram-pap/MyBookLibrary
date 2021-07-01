@@ -1,0 +1,18 @@
+<div class="container" *ngFor="let member of get().docs">
+    
+    <div class="row" *ngIf='member.cover_i != null'>
+        <div class="content col-sm-3" >          
+                <div fxFlex="15%" fxFlex.sm="33%"  fxFlex.xs="50%" >
+                    <a routerLink ='/{{member.key}}/{{member.title}}'  >
+                        <img   src="https://covers.openlibrary.org/b/id/{{member.cover_i}}-M.jpg" alt="{{member.title}}" /></a>
+                </div>
+        </div>
+        <div class=" content col-sm-6">
+          <p><b>{{member.title}} </b></p>
+                    <p>Author : {{member.author_name[0]}}</p>
+                    <p>This edition published in {{member.first_publish_year}}</p>
+                    <button mat-raised-button color="primary">Add Favourite</button>
+        </div>
+       
+    </div>
+</div>
